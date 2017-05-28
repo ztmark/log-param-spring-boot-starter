@@ -23,3 +23,11 @@ class DemoService {
     }
 }
 ```
+
+### properties
+
+disable log param
+
+```properties
+log-param.disable=true
+```
