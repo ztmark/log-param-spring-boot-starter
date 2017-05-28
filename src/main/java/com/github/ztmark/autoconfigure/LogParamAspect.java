@@ -20,7 +20,7 @@ public class LogParamAspect {
     @Autowired
     private LogParamProperties logParamProperties;
 
-    @Before("@annotation(com.github.ztmark.annotation.LogParam)")
+    @Before("@annotation(com.github.ztmark.annotation.LogParam) || @within(com.github.ztmark.annotation.LogParam)")
     public void beforeMethodProcess(JoinPoint joinPoint) {
         if (!logParamProperties.isDisable()) {
             logger.info("method {} called and param is {}", joinPoint.getSignature().getName(), gson.toJson(joinPoint.getArgs()));

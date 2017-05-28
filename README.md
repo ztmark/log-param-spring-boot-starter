@@ -24,6 +24,17 @@ class DemoService {
 }
 ```
 
+OR
+
+```java
+@LogParam
+class DemoService {
+    public String greeting(Person person) {
+        return "Hello " + person.getName();
+    }
+}
+```
+
 ### properties
 
 disable log param
